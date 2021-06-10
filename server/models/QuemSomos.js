@@ -10,6 +10,12 @@ const QuemSomos = new keystone.List('QuemSomos', {
 })
 
 QuemSomos.add({
+    key: {
+        type: Types.Text,
+        default: 'Quem Somos', 
+        noedit: true
+    },
+
     quemSomos: {
         type: Types.Textarea,
         required: true,
@@ -38,11 +44,11 @@ QuemSomos.add({
     },
 
     valores: {
-        type: Types.TextArray,
+        type: Types.Textarea,
         required: true,
         initial: true,
         index: true,
-        label: 'Visão',
+        label: 'Valor',
         note: 'Conte-nos sobre os valores da empresa'
     }
 });

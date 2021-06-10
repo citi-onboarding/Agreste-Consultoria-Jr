@@ -10,32 +10,36 @@ nodelete: true,
 }); 
 
 Banner.add({
-    
-image: {
-    type: Types.CloudinaryImages,
-    required: true,
-    initial:true,
-    label: "Imagem do Banner",
-},
+    key: { 
+        type: Types.Text, 
+        default: 'Banner', 
+        noedit: true
+        },
 
-titulo: {
-    type: Types.Text,
-    require: true,
-    initial: true,
-    index: true,
-    label: "Título do Banner",
-    note: "Dê um título ao seu Banner"
-},
-
-descricaoBanner:{ 
-    type: Types.Textarea, 
-    required: true, 
-    index: true, 
-    initial: true,
-    label: 'Descrição do Banner',
-    note: 'Conte-nos sobre esse sua proposta de valor'
-},
-
+    image: {
+        type: Types.CloudinaryImages,
+        required: true,
+        initial:true,
+        label: "Imagem do Banner",
+    },
+        
+    titulo: {
+        type: Types.Text,
+        require: true,
+        initial: true,
+        index: true,
+        label: "Título do Banner",
+        note: "Dê um título ao seu Banner"
+    },
+        
+    descricaoBanner:{ 
+        type: Types.Textarea, 
+        required: true, 
+        index: true, 
+        initial: true,
+        label: 'Descrição do Banner',
+        note: 'Conte-nos sobre esse sua proposta de valor'
+    },
 });
 
 Banner.register();
