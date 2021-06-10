@@ -17,7 +17,7 @@ Conteudos.add({
             required: true, 
             index: true, 
             initial: true,
-            label: 'nome do conteúdo 1',
+            label: 'Nome do conteúdo 1',
             note: 'Adicione o nome desse conteúdo 1'
         },
             
@@ -55,7 +55,7 @@ Conteudos.add({
             required: true, 
             index: true, 
             initial: true,
-            label: 'nome do conteúdo 2',
+            label: 'Nome do conteúdo 2',
             note: 'Adicione o nome desse conteúdo 2'
         },
             
@@ -93,7 +93,7 @@ Conteudos.add({
             required: true, 
             index: true, 
             initial: true,
-            label: 'nome do conteúdo 3',
+            label: 'Nome do conteúdo 3',
             note: 'Adicione o nome desse conteúdo 3'
         },
             
@@ -124,8 +124,6 @@ Conteudos.add({
             note: 'Adicione o link desse conteúdo 3'
         },
     },
-    
-
 });
 
 Conteudos.register()

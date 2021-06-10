@@ -10,9 +10,7 @@ nodelete: true,
 }); 
 
 Banner.add({
-
-
-
+    
 image: {
     type: Types.CloudinaryImages,
     required: true,

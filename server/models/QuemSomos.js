@@ -18,6 +18,7 @@ QuemSomos.add({
         label: 'Quem Somos',
         note: 'Conte-nos sobre quem é a empresa'
     },
+
     missao: {
         type: Types.Textarea,
         required: true,
@@ -26,6 +27,7 @@ QuemSomos.add({
         label: 'Missão',
         note: 'Conte-nos sobre a missão da empresa'
     },
+
     visao: {
         type: Types.Textarea,
         required: true,
@@ -34,6 +36,7 @@ QuemSomos.add({
         label: 'Visão',
         note: 'Conte-nos sobre a visão da empresa'
     },
+
     valores: {
         type: Types.TextArray,
         required: true,
@@ -42,7 +45,6 @@ QuemSomos.add({
         label: 'Visão',
         note: 'Conte-nos sobre os valores da empresa'
     }
-
 });
 
 QuemSomos.register()
