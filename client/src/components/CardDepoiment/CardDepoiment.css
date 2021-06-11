@@ -24,8 +24,11 @@ body, html {
   height: 294px;
   right: -23px;
   top: calc(70% - 294px/2 - 261px);
-  background: url('../../assets/Rectangle\ 79.png');
-  border: solid;
+  background-image: url('../../assets/Rectangle\ 79.png');
+  background-color: palevioletred;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 3px solid;
   border-color: red;
   box-sizing: border-box;
   border-radius: 15px 15px 15px 0px;
