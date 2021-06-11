@@ -1,10 +1,14 @@
 import {
   PostList,
+  CardDepoiment,
 } from './components';
 
 function App() {
   return (
-    <PostList />
+    <>
+      <CardDepoiment/>
+      
+    </>
   );
 }
 
