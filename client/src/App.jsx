@@ -1,10 +1,12 @@
 import {
-  PostList,
+  PostList, CardQuemSomos,
 } from './components';
+
+import LogoMissao from ".\\assets\\logo-missao.png";
 
 function App() {
   return (
-    <PostList />
+    <CardQuemSomos titulo="Missão" imagem={LogoMissao} descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "/>
   );
 }
 
