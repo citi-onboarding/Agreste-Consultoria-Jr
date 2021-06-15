@@ -23,9 +23,11 @@
     "dotenv": "^8.2.0",
     "keystone": "^4.2.1",
     "mongoose": "^5.10.15",
+    "react-scripts": "^4.0.3",
     "underscore": "^1.11.0"
   },
   "devDependencies": {
+    "@babel/code-frame": "^7.12.13",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",

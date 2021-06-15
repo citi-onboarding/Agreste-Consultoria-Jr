@@ -6,6 +6,9 @@ const Post = keystone.list('Posts');
 const Banner = keystone.list('Banner');
 const Conteudos = keystone.list('Conteudos');
 const QuemSomos = keystone.list('QuemSomos');
+const Services = keystone.list('Services');
+const Depoiments = keystone.list('Depoiments');
+const Company = keystone.list('Company');
 
 module.exports = (app) => {
   app.use(cors());
@@ -33,6 +36,16 @@ module.exports = (app) => {
       }
     });
   });
+  
+  app.get('/api/services', (req, res) => {
+    Services.model.find((err, data) => {
+      if (err) {
+        res.status(500).send('DB Error');
+      } else {
+        res.send(data);
+      }
+    });
+  });
 
   app.get('/api/Conteudos', (req, res) => {
     Conteudos.model.find((err, data) => {
@@ -43,9 +56,31 @@ module.exports = (app) => {
       }
     });
   });
+      
+      
+  app.get('/api/depoiments', (req, res) => {
+    Depoiments.model.find((err, data) => {
+      if (err) {
+        res.status(500).send('DB Error');
+      } else {
+        res.send(data);
+      }
+    });
+  });
+
 
   app.get('/api/QuemSomos', (req, res) => {
     QuemSomos.model.find((err, data) => {
+      if (err) {
+        res.status(500).send('DB Error');
+      } else {
+        res.send(data);
+      }
+    });
+  });
+
+  app.get('/api/company', (req, res) => {
+    Company.model.find((err, data) => {
       if (err) {
         res.status(500).send('DB Error');
       } else {
