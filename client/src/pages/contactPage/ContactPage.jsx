@@ -13,12 +13,13 @@ export default function ContactPage(){
                         <h1>Contato</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <div className='contact-input'>
-                            <ul>
-                                <ui> <input></input> </ui>
-                                <ui> <input></input> <input></input> </ui>
-                                <ui> <input></input> </ui>
-                                <ui>  <input></input> </ui>
-                            </ul>
+                                <input className="nome"></input>
+                                <div className="e-mail-telefone">
+                                    <input className="e-mail"></input> 
+                                    <input className="telefone"></input>
+                                </div>
+                                <input className="assunto"></input> 
+                                <input className="mensagem"></input> 
                         </div>
                         <div className='botao'>
                             <button> enviar </button>
