@@ -1,10 +1,16 @@
-import {
+import{
   PostList,
 } from './components';
 
+import{
+  ContactPage,
+} from './pages';
+
 function App() {
   return (
-    <PostList />
+    <>
+      <ContactPage />
+    </>
   );
 }
 
