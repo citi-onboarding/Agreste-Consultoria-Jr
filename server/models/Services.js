@@ -2,9 +2,17 @@ const keystone = require('keystone');
 
 const { Types } = keystone.Field;
 
-const Services = new keystone.List('Services', {label:'Serviços'});
+const Services = new keystone.List('Services', {
+  map: {name: 'key'},
+  label:'Serviços'
+});
 
 Services.add({
+  key:{
+    type: Types.Text,
+    default:'Serviços',
+    noedit: true
+  },
   image: {
     type: Types.CloudinaryImages,
     required: true,
