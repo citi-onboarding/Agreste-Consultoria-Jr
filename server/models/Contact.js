@@ -16,7 +16,7 @@ Contact.add({
         default:'Seção Contato',
         noedit: true
       },
-   description: {
+    description: {
     type: Types.Textarea,
     required: true,
     initial: true,
