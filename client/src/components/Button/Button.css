@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 .btn button{
     width: 240px;
     height: 35px;
@@ -28,7 +30,7 @@
 .btn p {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
     line-height: 27px;
     letter-spacing: -0.015em;
