@@ -6,7 +6,7 @@ export default function CardQuemSomos({titulo, descricao, imagem}){
         
         <div className="container">
             <div className="card">
-                    <h2>{titulo}</h2>
+                    <h3>{titulo}</h3>
                     <div className="card-img">
                         <img src={imagem} alt="icon"/>
                     </div>
