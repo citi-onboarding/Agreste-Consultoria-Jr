@@ -1,0 +1,36 @@
+.btn button{
+    width: 240px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1B3C74;
+    border-radius: 12px;
+    border: 1px solid rgba(119, 119, 119, 0.445);
+}
+
+.btn button:hover {
+    background: #26629E;
+    color: linear-gradient(0deg, rgba(255, 255, 255, 0.781) 12%, rgba(175,153,255,1) 100%);
+}
+
+.btn img {
+    width: 13px;
+    height: 13px;
+    margin-left: 10px;
+}
+
+.btn input {
+    width: 324px;
+    height: 46px;
+}
+
+.btn p {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 27px;
+    letter-spacing: -0.015em;
+    color: #EBECEE;
+}
