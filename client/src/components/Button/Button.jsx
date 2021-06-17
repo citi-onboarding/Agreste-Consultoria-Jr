@@ -10,7 +10,7 @@ export default function Button({nomeBtn, imagem, buttonColor, buttonSize, button
         background: buttonColor,
         width: buttonSize,
         }}>
-
+      
         <p style={{color: buttonTextColor,}}>{nomeBtn}</p><img src={imagem} alt=""/></button>
     </div>
     );
