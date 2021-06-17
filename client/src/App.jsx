@@ -2,7 +2,7 @@ import {
   PostList, CardQuemSomos,
 } from './components';
 
-import LogoMissao from ".\\assets\\logo-missao.png";
+import LogoMissao from "../src/assets/logo-missao.png";
 
 function App() {
   return (
