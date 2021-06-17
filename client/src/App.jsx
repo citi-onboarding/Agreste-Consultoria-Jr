@@ -4,7 +4,7 @@ import {
 
 function App() {
   return (
-  <Button nomeBtn="Já volto" imagem='none' buttonTextColor="white" />
+  <Button nomeBtn="Nome" imagem="none" buttonTextColor="white" />
   );
 }
 
