@@ -1,10 +1,10 @@
 import {
-  PostList,
+  Button,
 } from './components';
 
 function App() {
   return (
-    <PostList />
+  <Button nomeBtn="Já volto" imagem='none' buttonTextColor="white" />
   );
 }
 
