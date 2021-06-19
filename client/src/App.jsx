@@ -1,10 +1,16 @@
 import {
+  PostList,
+  CardDepoiment,
   Button,
 } from './components';
 
 function App() {
   return (
-  <Button nomeBtn="Mais sobre nós" buttonTextColor="#fff"/>
+    <>
+      <CardDepoiment/>
+      <CardDepoiment/>
+      <Button nomeBtn="Mais sobre nós" buttonTextColor="#fff"/>    
+    </>
   );
 }
 
