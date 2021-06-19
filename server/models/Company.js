@@ -3,6 +3,7 @@ const keystone = require('keystone');
 const { Types } = keystone.Field;
 
 const Company = new keystone.List('Company',{
+  map: {name: "key"},
   autocreate: true,
   nocreate: true,
   nodelete: true,
@@ -10,6 +11,11 @@ const Company = new keystone.List('Company',{
 });
 
 Company.add({
+  key:{
+    type: Types.Text,
+    default:'Informações Footer',
+    noedit: true
+  },
   adress: {
     type: Types.Text,
     required: true,
