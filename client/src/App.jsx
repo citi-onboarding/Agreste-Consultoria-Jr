@@ -1,6 +1,7 @@
 import {
   PostList,
   CardDepoiment,
+  Button,
 } from './components';
 
 function App() {
@@ -8,8 +9,7 @@ function App() {
     <>
       <CardDepoiment/>
       <CardDepoiment/>
-      
-      
+      <Button nomeBtn="Mais sobre nós" buttonTextColor="#fff"/>    
     </>
   );
 }
