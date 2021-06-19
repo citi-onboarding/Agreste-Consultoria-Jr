@@ -1,0 +1,128 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,500&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.banner {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(255, 250, 250, 0.445), rgba(255, 255, 255, 0.233)), url(./imagem/Img-back.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.banner-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-txt, .banner-logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-logo img{
+    width: 350px;
+    height: 257px;
+}
+
+.banner-txt {
+    text-align: left;
+}
+
+.banner-txt h1{
+    width: 650px;
+    height: 130px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 60px;
+    letter-spacing: -0.015em;
+    color: #3E4243;
+}
+
+.banner-txt p {
+    width: 640px;
+    height: 73px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: -0.015em;
+    color: #3E4243;
+}
+
+
+@media screen and (max-width: 1018px) {
+    .banner-direita {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 667px) {
+    .banner-txt h1 {
+        width: 400px;
+        height: 130px;
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .banner-txt p {
+        width: 340px;
+        font-size: 17px;
+        line-height: 27px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .banner-txt h1 {
+        width: 350px;
+        height: 130px;
+        font-size: 29px;
+        line-height: 40px;
+    }
+
+    .banner-txt p {
+        width: 330px;
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .banner-txt h1 {
+        width: 300px;
+        font-size: 25px;
+        
+    }
+
+    .banner-txt p {
+        width: 230px;
+        font-size: 14px;
+    }
+}
+
+
+
