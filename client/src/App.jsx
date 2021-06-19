@@ -1,6 +1,6 @@
 import {
-  PostList, 
-  CardQuemSomos,
+  PostList,
+  CardDepoiment,
   Button,
   ContentMobile,
 } from './components';
@@ -15,6 +15,9 @@ function App() {
   return (
     <>
       <ContentMobile />
+      <CardDepoiment/>
+      <CardDepoiment/>
+      <Button nomeBtn="Mais sobre nós" buttonTextColor="#fff"/>    
     </>
   );
 }
