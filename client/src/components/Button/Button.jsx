@@ -1,7 +1,7 @@
 import React from "react";
 import './Button.css';
 
-export default function Button({nomeBtn, imagem, buttonColor, buttonSize, buttonTextColor}){
+export default function Button({nomeBtn, imagem, buttonColor, buttonSize, textSize, buttonTextColor}){
     return(
     <div 
         className="btn">
@@ -11,7 +11,7 @@ export default function Button({nomeBtn, imagem, buttonColor, buttonSize, button
         width: buttonSize,
         }}>
       
-        <p style={{color: buttonTextColor,}}>{nomeBtn}</p><img src={imagem} alt=""/></button>
+        <p style={{color: buttonTextColor, fontSize: textSize, }}>{nomeBtn}</p><img src={imagem} alt=""/></button>
     </div>
     );
 } 
