@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.footer {
+    width: 100vw;
+    background-color: #EBECEE;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.footer-esquerda {
+    width: 226px;
+    height: 90px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.footer-esquerda p{
+    width: 226px;
+    height: 24px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-esquerda p {
+    letter-spacing: -0.015em;
+}
+
+.footer-social {
+    width: 120px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.txt-contato {
+    width: 200px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -0.015em;
+    color: #2A2A2A;
+}
+
+.social-icon {
+    width: 17px;
+    height: 16px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 23px;
+}
+
+.social-txt {
+    width: 100px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.social-txt p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 15px;
+    letter-spacing: -0.015em;
+}
+
+.footer-logo{
+    width: 281px;
+    height: 192px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo img{
+    width: 200px;
+    height: 127px;
+}
+
+.endereco {
+    width: 381px;
+    height: 83px;
+    font-family: 'Poppins', sans-serif;
+    text-align: right;
+}
+
+.endereco p {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: -0.015em;
+    padding-bottom: 20px;
+}
+
+.footer-logo-citi {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-logo-citi img {
+    width: 26px;
+    height: 13px;
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 835px) {
+    .footer {
+        display: grid;
+        grid-template-areas: initial;
+    }
+
+    .footer-logo {
+        height: 170px;
+        grid-row: 1;
+    }
+
+    .endereco {
+        width: 298px;
+        height: 170px;
+        padding-top: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .endereco p {
+        width: 250px;
+        font-size: 15px;
+    }
+
+    .social-txt p {
+        width: 130px;
+    }
+    
+    .footer-esquerda {
+        margin-left: 24px;
+    }
+
+    .footer-social {
+        margin-left: 24px;
+    }
+
+    .txt-contato {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-logo-citi {
+        margin-right: 5px;
+    }
+}
+
+

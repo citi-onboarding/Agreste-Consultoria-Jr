@@ -1,4 +1,4 @@
-import {
+import{
   PostList,
   CardDepoiment,
   Button,
@@ -6,15 +6,20 @@ import {
 } from './components';
 
 import{
-  ContentPage,
+  ContactPage,
+  Banner,
+  Footer,
+  NavBar,
 } from './pages';
-
-
 
 function App() {
   return (
     <>
-      <ContentPage/>
+      <NavBar/> 
+      <Banner/>
+      <QuemSomos/>
+      <ContactPage/>
+      <Footer/> 
     </>
   );
 }
