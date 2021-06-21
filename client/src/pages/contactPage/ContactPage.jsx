@@ -15,7 +15,7 @@ export default function ContactPage(){
     const inputRef = useRef();
 
     const loadContact = async () => {
-        const res = await axios.get('http://localhost:3002/api/contact');
+        const res = await axios.get('http://localhost:3001/api/contact');
         setContact(res.data);
     };
 
