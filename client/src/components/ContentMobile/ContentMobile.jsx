@@ -9,14 +9,16 @@ export default function ContentMobile({image, sectionTitle, contentTitle, textDe
                 <h1 className="section-title">{sectionTitle}</h1>
             </div>
             <div className="content-container">
-                <div className="content-border">
-                    <img className="image-content" src={image} />
+                <div className="image-content" >
+                    <img className="image" src={image}/>
                 </div>
-                <h2 className="text-titulo">{contentTitle}</h2>
-                <p className="text-description">{textDescription}</p>
-                <Button nomeBtn="Link para a postagem" imagem="none" buttonTextColor="white" buttonSize="100%" textSize="20px"/>
-            </div>
+                <h2 className="text-title">{contentTitle}</h2>
+                <text className="text-description"> {textDescription} </text>
             
+                <div className="button">
+                    <Button nomeBtn="Link para a postagem" buttonSize="100%" buttonTextColor="white" textSize="16px"/>
+                </div>
+            </div>
         </>
     );
 }
