@@ -3,6 +3,7 @@ import{
   CardDepoiment,
   Button,
   ContentMobile,
+  QuemSomos,
 } from './components';
 
 import{
@@ -10,6 +11,7 @@ import{
   Banner,
   Footer,
   NavBar,
+  ContentPage,
 } from './pages';
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
       <NavBar/> 
       <Banner/>
       <QuemSomos/>
+      <ContentPage/>
       <ContactPage/>
       <Footer/> 
     </>

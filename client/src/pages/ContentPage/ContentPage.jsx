@@ -33,7 +33,7 @@ export default function ContentPage(){
                     <div className="all-information">
                         <h2>Nome do Conteúdo</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati id illum eaque maiores quasi labore nulla corrupti quod officia dicta exercitationem odit quia assumenda quo consectetur sunt ab, error illo!</p>
-                        <div className="button">
+                        <div className="button-content">
                             <Button nomeBtn="Link para a postagem" buttonTextColor="white"/>
                         </div>
                     </div>
@@ -41,7 +41,7 @@ export default function ContentPage(){
                         <div className="content-card-title">
                             <h3>Acesse conteúdos gratuitos:</h3>
                         </div>
-                        <div className="cards">
+                        <div className="cards-content">
                             <div className="card-content1">
                                 <img className="thumb" src={Image}/>
                                 <h4>Nome do conteúdo</h4>
