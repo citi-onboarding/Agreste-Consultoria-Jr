@@ -15,15 +15,11 @@ import{
 function App() {
   return (
     <>
-<<<<<<< HEAD
-      <ContactPage />
-=======
       <NavBar/> 
       <Banner/>
       <QuemSomos/>
       <ContactPage/>
       <Footer/> 
->>>>>>> 5fbc337406993906a34f49a6c186fef34a5ae1ef
     </>
   );
 }

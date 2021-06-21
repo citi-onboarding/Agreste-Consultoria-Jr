@@ -43,7 +43,7 @@ export default function ContactPage(){
                         <div className='contact-input'>
                                 <input 
                                     type="text" 
-                                    className="nome" 
+                                    className="nome-input" 
                                     placeholder="Nome"
                                     ref={inputRef}
                                     value={inputTextName}
