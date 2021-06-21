@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #EBECEE;
+}
+
+
+@media screen and (min-width: 981px) {
+    .mobile{
+        display: none;
+    }
+
+    .header-title{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 150px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: medium;
+        line-height: 72px;
+        text-align: center;
+        letter-spacing: -0.015em;
+        color: #032C66;
+    }
+
+    .struct-content{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 2fr 3fr;
+        padding: 20px 8%;
+        box-sizing: border-box;
+        gap: 40px;
+    }
+
+    .all-information h2{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 37px;
+        letter-spacing: -0.015em;
+        color: #2B2B2B;
+    }
+
+    .all-information p{
+        padding: 20px 0;
+        font-family: Montserrat;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 20px;
+        letter-spacing: -0.015em;
+        color: #2B2B2B;
+    }
+
+    .button-content{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .second-column{
+        display: grid;
+        grid-template-columns: 1f;
+        grid-template-rows: 3fr 2fr;
+    }
+
+    .cards-content{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+    
+    .content-card-title{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: -0.015em;
+        color: #1A1A1A;
+        font-size: small;
+    }
+
+    .thumb{
+        width: 200px;
+        height: 100px;
+        object-fit: cover;
+        margin-right: 10px;
+    }
+
+    .cards-content h4{
+        font-size: 10px;
+    }
+
+    .image-of-turn{
+        width: 100%;
+        filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+    }
+
+}
+ 
+@media screen and (max-width: 980px) {
+    .mobile{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .struct-content{
+        display: none;
+    }
+
+    .header-title{
+        position: absolute;
+        width: 100%;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 72px;
+        text-align: center;
+        letter-spacing: -0.015em;
+        color: #032C66;
+    }
+
+}

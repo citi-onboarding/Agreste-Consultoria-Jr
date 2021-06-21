@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ContactPage.css';
 import axios from 'axios';
+import { Button } from '../../components';
 
 export default function ContactPage(){
 
@@ -12,8 +13,6 @@ export default function ContactPage(){
 
     const [contact, setContact] = useState([]);
 
-    const inputRef = useRef();
-
     const loadContact = async () => {
         const res = await axios.get('http://localhost:3001/api/contact');
         setContact(res.data);
@@ -22,10 +21,6 @@ export default function ContactPage(){
     useEffect(() => {
         loadContact();
     }, []);
-
-    useEffect(() => {
-        inputRef.current.focus();
-      }, []);
 
     return(
         <>
@@ -43,26 +38,23 @@ export default function ContactPage(){
                         <div className='contact-input'>
                                 <input 
                                     type="text" 
-                                    className="nome" 
+                                    className="nome-input" 
                                     placeholder="Nome"
-                                    ref={inputRef}
                                     value={inputTextName}
                                     onChange={(e) => setInputTextName(e.target.value)}
                                 />
                                 <div className="e-mail-telefone">
                                     <input 
                                         type="e-mail" 
-                                        className="e-mail" 
+                                        className="e-mail-input" 
                                         placeholder="E-mail"
-                                        ref={inputRef}
                                         value={inputTextEmail}
                                         onChange={(e) => setInputTextEmail(e.target.value)}
                                     /> 
                                     <input 
                                         type="tel"
-                                        className="telefone" 
+                                        className="telefone-input" 
                                         placeholder="Telefone"
-                                        ref={inputRef}
                                         value={inputTextTel}
                                         onChange={(e) => setInputTextTel(e.target.value)}
                                     />
@@ -71,20 +63,21 @@ export default function ContactPage(){
                                     type="text" 
                                     className="assunto" 
                                     placeholder="Assunto"
-                                    ref={inputRef}
                                     value={inputTextAss}
                                     onChange={(e) => setInputTextAss(e.target.value)}
                                 /> 
                                 <textarea 
                                     className="mensagem" 
                                     placeholder="Mensagem"
-                                    ref={inputRef}
                                     value={inputTextMsg}
                                     onChange={(e) => setInputTextMsg(e.target.value)}
                                 /> 
                         </div>
-                        <div className='botao'>
-                            <button> enviar </button>
+                        <div className="botao-contato-web">
+                            <Button className="botao-contato-web" nomeBtn="Enviar"/>
+                        </div>
+                        <div className="botao-contato-mobile">
+                            <Button className="botao-contato-mobile" buttonColor="#EBECEE" buttonTextColor="#032C66" nomeBtn="Enviar"/>
                         </div>
                     </div>
                 </div> 

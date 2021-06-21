@@ -2,6 +2,7 @@ import{
   PostList,
   CardDepoiment,
   Button,
+  ContentMobile,
   QuemSomos,
 } from './components';
 
@@ -10,6 +11,7 @@ import{
   Banner,
   Footer,
   NavBar,
+  ContentPage,
 } from './pages';
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
       <NavBar/> 
       <Banner/>
       <QuemSomos/>
+      <ContentPage/>
       <ContactPage/>
       <Footer/> 
     </>
