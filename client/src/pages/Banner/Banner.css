@@ -47,8 +47,19 @@ body {
     height: 257px;
 }
 
-.banner-txt {
-    text-align: left;
+.banner-direita {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6rem;
+    margin-top: 6rem;
+}
+
+.btn-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner-txt h1{
@@ -60,6 +71,7 @@ body {
     font-size: 38px;
     line-height: 60px;
     letter-spacing: -0.015em;
+    text-align: left;
     color: #3E4243;
 }
 
@@ -72,17 +84,23 @@ body {
     font-size: 20px;
     line-height: 36px;
     letter-spacing: -0.015em;
+    text-align: left;
     color: #3E4243;
 }
 
 
-@media screen and (max-width: 1018px) {
+@media screen and (max-width: 1074px) {
     .banner-direita {
         display: none;
     }
+    
 }
 
 @media screen and (max-width: 667px) {
+    .banner {
+        height: 100vh;
+    }
+    
     .banner-txt h1 {
         width: 400px;
         height: 130px;

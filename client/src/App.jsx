@@ -2,21 +2,24 @@ import{
   PostList,
   CardDepoiment,
   Button,
+  QuemSomos,
 } from './components';
 
 import{
   ContactPage,
   Banner,
+  Footer,
+  NavBar,
 } from './pages';
 
 function App() {
   return (
     <>
-      <Banner />
-      <ContactPage />
-      <CardDepoiment/>
-      <CardDepoiment/>
-      <Button nomeBtn="Mais sobre nós" buttonTextColor="#fff"/>    
+      <NavBar/> 
+      <Banner/>
+      <QuemSomos/>
+      <ContactPage/>
+      <Footer/> 
     </>
   );
 }
