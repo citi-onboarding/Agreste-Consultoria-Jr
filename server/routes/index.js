@@ -9,6 +9,7 @@ const QuemSomos = keystone.list('QuemSomos');
 const Services = keystone.list('Services');
 const Depoiments = keystone.list('Depoiments');
 const Company = keystone.list('Company');
+const Contact = keystone.list('Contact');
 
 module.exports = (app) => {
   app.use(cors());
@@ -81,6 +82,16 @@ module.exports = (app) => {
 
   app.get('/api/company', (req, res) => {
     Company.model.find((err, data) => {
+      if (err) {
+        res.status(500).send('DB Error');
+      } else {
+        res.send(data);
+      }
+    });
+  });
+
+  app.get('/api/contact', (req, res) => {
+    Contact.model.find((err, data) => {
       if (err) {
         res.status(500).send('DB Error');
       } else {

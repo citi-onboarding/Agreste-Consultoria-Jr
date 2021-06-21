@@ -2,9 +2,17 @@ const keystone = require('keystone');
 
 const { Types } = keystone.Field;
 
-const Depoiments = new keystone.List('Depoiments', {label:'Depoimentos'});
+const Depoiments = new keystone.List('Depoiments', {
+  map: { name: 'key'},
+  label:'Depoimentos'
+});
 
 Depoiments.add({
+  key:{
+    type: Types.Text,
+    default:'Depoimentos',
+    noedit: true
+  },
   image: {
     type: Types.CloudinaryImages,
     required: true,
