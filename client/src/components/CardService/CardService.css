@@ -7,16 +7,44 @@
 }
 
 .external-container-card-service{
-    width: 20vw;
-    height: 350px;
-}
-
-.card-service{
     width: 100%;
     height: 100%;
-    background-image: url("./image/contentimg.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    color: #EBECEE;
 }
+
+@media screen and (min-width: 781px) {
+    .card-service{
+        width: 95%;
+        height: 350px;
+        background-image: url("./image/contentimg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        color: #EBECEE;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+}
+
+
+@media screen and (max-width: 780px) {
+    .card-service{
+        width: 100%;
+        height: 480px;
+        background-image: url("./image/contentimg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        color: #EBECEE;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 25px;
+        box-sizing: border-box;
+    }
+}
+

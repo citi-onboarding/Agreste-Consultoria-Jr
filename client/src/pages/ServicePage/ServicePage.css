@@ -17,12 +17,6 @@
     height: 100vh;
 }
 
-.carrossel-service-page{
-    padding: 30px 60px;
-    box-sizing: border-box;
-}
-
-
 @media screen and (min-width: 781px) {
     .service-page-title{
         height: 160px;
@@ -36,6 +30,12 @@
         letter-spacing: -0.015em;
         color: #EBECEE;
     }
+
+    .carrossel-service-page{
+        padding: 10px 100px;
+        box-sizing: border-box;
+    }
+
 }
 
 @media screen and (max-width: 780px) {
@@ -52,5 +52,54 @@
         color: #EBECEE;
     }
 
+    .carrossel-service-page{
+        padding: 10px 30px;
+        box-sizing: border-box;
+    }
+
 }
 
+.slick-active { 
+    padding: 20px 0; 
+  }
+  
+  .slick-center { 
+    transform: scale(1.05);
+  }
+  
+  .slick-slide:not(.slick-active) { 
+    margin: 20px 0; 
+  }
+  
+  .child { 
+    width:100%; 
+  }
+  
+  .slide:not(.slick-active) { 
+    cursor: pointer; 
+  }
+
+  .slick-slide.slick-active{
+      display: flex !important;
+      justify-content: center !important;
+  }
+
+  .slick-slide.slick-active.slick-center.slick-current{
+    display: flex;
+    justify-content: center;
+}
+
+.slick-dots li button:before {
+    font-size: 2px;
+    content: url("./assets/marcadorbranco.png") !important;
+    width: 1px;
+}
+
+.slick-prev:before {
+    content: url("./assets/spebranca.png") !important;
+    font-size: small;
+}
+
+.slick-next:before {
+    content: url("./assets/spdbranca.png") !important;
+}

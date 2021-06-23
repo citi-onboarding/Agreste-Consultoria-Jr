@@ -17,6 +17,16 @@ export default function ServicePage(){
         speed: 500,
         arows: true,
         dots: true,
+        responsive: [
+            {
+                breakpoint: 780,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  initialSlide: 1
+                }
+            }
+        ]
     };
 
     const [service, setService] = useState([]);

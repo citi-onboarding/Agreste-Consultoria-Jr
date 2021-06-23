@@ -19,7 +19,12 @@ import{
 function App() {
   return (
     <>
+      <NavBar/>
+      <Banner/>
       <ServicePage/>
+      <ContentPage/>
+      <ContactPage/>
+      <Footer/>
     </>
   );
 }

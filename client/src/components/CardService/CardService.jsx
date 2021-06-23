@@ -7,11 +7,13 @@ export default function CardService({imageService, contentText, descricptionServ
         <>
         <div className="external-container-card-service">
             <div className="card-service" style={{backgroundImage: `url(${imageService})` }}>
-                <div className="service-title">
-                    <h2>{contentText}</h2>
-                </div>
-                <div className="service-description">
-                    <p>{descricptionService}</p>
+                <div className="card-service-information">
+                    <div className="service-title">
+                        <h2>{contentText}</h2>
+                    </div>
+                    <div className="service-description">
+                        <p>{descricptionService}</p>
+                    </div>
                 </div>            
             </div>
         </div>
