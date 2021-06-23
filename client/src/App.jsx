@@ -14,6 +14,7 @@ import{
   NavBar,
   ContentPage,
   ServicePage,
+  Depoimento,
 } from './pages';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <NavBar/>
       <Banner/>
       <ServicePage/>
+      <Depoimento/> 
       <ContentPage/>
       <ContactPage/>
       <Footer/>
