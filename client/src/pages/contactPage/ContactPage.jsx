@@ -28,7 +28,10 @@ export default function ContactPage(){
                 <div className="image-contact"/>
                 <div className="contact-container">
                     <div className="contact-elements">
-                        <h1>Contato</h1>
+                        <div className="section-contact-title">
+                            <h1>Contato</h1>
+                        </div>
+
                         {contact?.map(({ description }) => (
                             <>
                                 <p>{description}</p>

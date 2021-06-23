@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.service-page-container{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1B3C74;
+    width: 100vw;
+    height: 100vh;
+}
+
+@media screen and (min-width: 781px) {
+    .service-page-title{
+        height: 160px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        font-style: normal;
+        font-weight: bold;
+        font-size: medium;
+        text-align: center;
+        letter-spacing: -0.015em;
+        color: #EBECEE;
+    }
+
+    .carrossel-service-page{
+        padding: 10px 100px;
+        box-sizing: border-box;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+    
+    .service-page-title{
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        font-style: normal;
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: -0.015em;
+        color: #EBECEE;
+    }
+
+    .carrossel-service-page{
+        padding: 10px 30px;
+        box-sizing: border-box;
+    }
+
+}
+
+.slick-active { 
+    padding: 20px 0; 
+  }
+  
+  .slick-center { 
+    transform: scale(1.05);
+  }
+  
+  .slick-slide:not(.slick-active) { 
+    margin: 20px 0; 
+  }
+  
+  .child { 
+    width:100%; 
+  }
+  
+  .slide:not(.slick-active) { 
+    cursor: pointer; 
+  }
+
+  .slick-slide.slick-active{
+      display: flex !important;
+      justify-content: center !important;
+  }
+
+  .slick-slide.slick-active.slick-center.slick-current{
+    display: flex;
+    justify-content: center;
+}
+
+.slick-dots li button:before {
+    font-size: 2px;
+    content: url("./assets/marcadorbranco.png") !important;
+    width: 1px;
+}
+
+.slick-prev:before {
+    content: url("./assets/spebranca.png") !important;
+    font-size: small;
+}
+
+.slick-next:before {
+    content: url("./assets/spdbranca.png") !important;
+}
