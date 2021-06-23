@@ -4,6 +4,7 @@ import{
   Button,
   ContentMobile,
   QuemSomos,
+  CardService,
 } from './components';
 
 import{
@@ -12,17 +13,13 @@ import{
   Footer,
   NavBar,
   ContentPage,
+  ServicePage,
 } from './pages';
 
 function App() {
   return (
     <>
-      <NavBar/> 
-      <Banner/>
-      <QuemSomos/>
-      <ContentPage/>
-      <ContactPage/>
-      <Footer/> 
+      <ServicePage/>
     </>
   );
 }

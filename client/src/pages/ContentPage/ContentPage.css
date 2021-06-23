@@ -79,17 +79,17 @@ body{
         width: 100%;
         height: 100%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: flex-start;
     }
     
     .content-card-title{
         font-family: Poppins;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 500;
         letter-spacing: -0.015em;
         color: #1A1A1A;
-        font-size: small;
+        font-size: 15px;
     }
 
     .thumb{
@@ -129,7 +129,6 @@ body{
         align-items: flex-end;
         font-style: normal;
         font-weight: bold;
-        font-size: 12px;
         line-height: 72px;
         text-align: center;
         letter-spacing: -0.015em;
