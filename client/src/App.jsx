@@ -12,17 +12,14 @@ import{
   Footer,
   NavBar,
   ContentPage,
+  Depoimento,
 } from './pages';
 
 function App() {
   return (
     <>
-      <NavBar/> 
-      <Banner/>
-      <QuemSomos/>
-      <ContentPage/>
-      <ContactPage/>
-      <Footer/> 
+      <Depoimento/> 
+    
     </>
   );
 }
