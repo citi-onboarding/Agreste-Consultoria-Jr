@@ -51,6 +51,11 @@ p  {
         padding: 20px 40px;
         box-sizing: border-box;
     }
+
+    .contact-input{
+        padding-top: 15px;
+        box-sizing: border-box;
+    }
     
     .image-contact{
         z-index: 1;
@@ -68,6 +73,11 @@ p  {
         border: 3px solid #EBECEE;
         box-sizing: border-box;
         border-radius: 45px 45px 45px 0px;
+    }
+
+    .section-contact-title{
+        padding: 15px 0;
+        box-sizing: border-box;
     }
 
     .contact-input{
@@ -88,7 +98,7 @@ p  {
         justify-content: flex-end;
     }
 
-    .telefone{
+    .telefone-input{
         width: 100%;
         margin-left: 20px;
     }
@@ -149,6 +159,11 @@ p  {
 
 @media screen and  (max-width: 780px) {
 
+    .section-contact-title{
+        padding: 15px 0;
+        box-sizing: border-box;
+    }
+
     h1{
         text-align: center;
     }
@@ -168,6 +183,11 @@ p  {
         color: #EBECEE;
     }
 
+    .contact-input{
+        padding-top: 15px;
+        box-sizing: border-box;
+    }
+
     .contact-input, .e-mail-telefone{
         display: flex;
         flex-direction: column;
@@ -185,7 +205,7 @@ p  {
     }
 
     .mensagem{
-        height: 40vh;
+        height: 35vh;
         margin-bottom: 3vh;
         border: none;
         border-bottom: 2px solid #EBECEE;

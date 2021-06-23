@@ -23,7 +23,7 @@ export default function ContentPage(){
     return(
         <>
             <div className="header-title">
-                <h1>Nosso Conteúdo</h1>
+                <h1>Nosso conteúdo</h1>
             </div>
             <div className="struct-content">
                 <div className="image-section">
@@ -39,7 +39,7 @@ export default function ContentPage(){
                     </div>
                     <div className="card-compact" >
                         <div className="content-card-title">
-                            <h3>Acesse conteúdos gratuitos:</h3>
+                            <p>Acesse conteúdos gratuitos:</p>
                         </div>
                         <div className="cards-content">
                             <div className="card-content1">
