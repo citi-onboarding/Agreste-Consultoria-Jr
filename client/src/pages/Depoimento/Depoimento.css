@@ -166,10 +166,78 @@ body {
       margin-top: 8rem;
 }
 
-   
+.slick-prev:before, .slick-next:before {
+    line-height: 31.6;
+    margin: 0 auto;
+}
 
-    @media screen and (max-width: 768px) {
-        .slick-depoimentos{
-            height: 10vh;
-        }
+.slick-prev:before{
+    display: flex !important;
+    justify-content: flex-end;
+    width: 42vw;
+}
+
+.slick-next:before {
+    margin-left: -81vw;
+}
+
+@media (max-width: 836px){
+    .slick-next:before {
+        margin-left: -79vw;
     }
+    .slick-prev:before{
+        
+        width: 41vw;
+    }
+}
+
+@media (max-width: 680px){
+    .slick-next:before {
+        margin-left: -72vw;
+    }
+    .slick-prev:before{
+        
+        width: 39vw;
+    }
+}
+
+@media (max-width: 540px){
+    .slick-next:before {
+        margin-left: -69vw;
+    }
+    .slick-prev:before{
+        
+        width: 37vw;
+    }
+}
+
+@media (max-width: 488px){
+    .slick-next:before {
+        margin-left: -63vw;
+    }
+    .slick-prev:before{
+        
+        width: 35vw;
+    }
+}
+
+@media (max-width: 428px){
+    .slick-next:before {
+        margin-left: -60vw;
+    }
+    .slick-prev:before{
+        
+        width: 35vw;
+    }
+}
+
+@media (max-width: 336px){
+    .slick-next:before {
+        margin-left: -52vw;
+    }
+    .slick-prev:before{
+        
+        width: 30vw;
+    }
+}
+

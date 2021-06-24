@@ -14,6 +14,7 @@ function App() {
       <NavBar/>
       <Banner/>
       <ServicePage/>
+      <Depoimento/>
       <ContentPage/>
       <ContactPage/>
       <Footer/>
