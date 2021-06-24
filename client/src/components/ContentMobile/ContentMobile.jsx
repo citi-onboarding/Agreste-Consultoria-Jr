@@ -2,7 +2,7 @@ import React from 'react';
 import './ContentMobile.css';
 import { default as Button } from '../Button';
 
-export default function ContentMobile({image, sectionTitle, contentTitle, textDescription}){
+export default function ContentMobile({image, sectionTitle, contentTitle, textDescription, linkConteudo}){
     return(
         <>
             <div className="titulo">
@@ -16,7 +16,7 @@ export default function ContentMobile({image, sectionTitle, contentTitle, textDe
                 <text className="text-description"> {textDescription} </text>
             
                 <div className="button">
-                    <Button nomeBtn="Link para a postagem" buttonSize="100%" buttonTextColor="white" textSize="16px"/>
+                    <Button nomeBtn="Link para a postagem" linkBtn={linkConteudo} buttonSize="100%" buttonTextColor="white" textSize="16px"/>
                 </div>
             </div>
         </>
