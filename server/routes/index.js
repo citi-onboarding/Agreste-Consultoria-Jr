@@ -18,16 +18,6 @@ module.exports = (app) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
   });
 
-  app.get('/api/posts', (req, res) => {
-    Post.model.find((err, data) => {
-      if (err) {
-        res.status(500).send('DB Error');
-      } else {
-        res.send(data);
-      }
-    });
-  });
-
   app.get('/api/Banner', (req, res) => {
     Banner.model.find((err, data) => {
       if (err) {

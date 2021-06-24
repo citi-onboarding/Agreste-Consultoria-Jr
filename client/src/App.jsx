@@ -1,13 +1,4 @@
 import{
-  PostList,
-  CardDepoiment,
-  Button,
-  ContentMobile,
-  QuemSomos,
-  CardService,
-} from './components';
-
-import{
   ContactPage,
   Banner,
   Footer,
@@ -22,6 +13,7 @@ function App() {
     <>
       <NavBar/>
       <Banner/>
+      <ServicePage/>
       <ContentPage/>
       <ContactPage/>
       <Footer/>
