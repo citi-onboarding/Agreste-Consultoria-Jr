@@ -85,11 +85,11 @@ overflow-x: hidden;
   text-align: left;
 }
 
-@media screen and (max-width: 1090px) {
-  .contentDepoimento {
-    
-    margin: 0px;
-    
+@media (max-width: 800px){
+  .foto {
+    width: 210px;
+    margin-left: -0.01rem;
+  }
+  
 }
 
-}

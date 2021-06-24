@@ -14,6 +14,7 @@ export default function ServicePage(){
         infinite: true,
         centerPadding: "-5px",
         slidesToShow: 3,
+        slidesToScroll: 3,
         speed: 500,
         arows: true,
         dots: true,
