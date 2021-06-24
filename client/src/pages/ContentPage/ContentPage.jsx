@@ -38,7 +38,9 @@ export default function ContentPage(){
                 <div className="second-column">
                     <div className="all-information">
                         <h2> { content[i]?.nomeConteudo } </h2>
-                        <p> { content[i]?.descricaoConteudo }</p>
+                        <div className="content-p">
+                            <p> { content[i]?.descricaoConteudo }</p>
+                        </div>
                         <div className="button-content">
                             <Button nomeBtn="Link para a postagem" linkBtn={content[i]?.link} buttonTextColor="white"/>
                         </div>
