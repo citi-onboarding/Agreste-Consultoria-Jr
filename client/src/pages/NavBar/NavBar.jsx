@@ -34,11 +34,11 @@ export default function NavBar(){
                 </div>
                 
                     <ul id="menu" class="menu" role="Menu">
-                        <li><a href="">Início</a></li>
-                        <li><a href="">Nossos serviços</a></li>
-                        <li><a href="">Nossos clientes</a></li>
-                        <li><a href="">Conteúdo</a></li>
-                        <li><a href="">Contato</a></li>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#servicos">Nossos serviços</a></li>
+                        <li><a href="#depoimentos">Nossos clientes</a></li>
+                        <li><a href="#conteudo">Conteúdo</a></li>
+                        <li><a href="#contato">Contato</a></li>
                     </ul> 
             </nav>
         </header>

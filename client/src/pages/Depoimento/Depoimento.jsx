@@ -1,11 +1,28 @@
-import React from "react";
+import React ,{ useEffect, useState }from 'react';
 import './Depoimento.css';
 import Slider from "react-slick";
+import axios from 'axios';
 
 import { default as CardDepoiment } from "../../components/CardDepoiment";
 
 
 export default function Depoimento(){
+
+    const [depoiment, setDepoiment] = useState([]);
+    
+    const loadDepoiment = async () => {
+        const res = await axios.get('http://localhost:3001/api/depoiments');
+        setDepoiment(res.data);
+    };
+
+    useEffect(() => {
+        loadDepoiment();
+    }, []);
+
+    useEffect(() => {
+        console.log('Depoimentos', depoiment);
+    }, [depoiment]);
+
     const settings = {
         dots: true,
         infinite: true,
@@ -18,7 +35,7 @@ export default function Depoimento(){
               breakpoint: 700,
               settings: {
                 slidesToShow: 1,
-                slidesToScroll: 3,
+                slidesToScroll: 1,
                 infinite: true,
                 dots: true
               }
@@ -27,7 +44,7 @@ export default function Depoimento(){
                 breakpoint: 1000,
                 settings: {
                   slidesToShow: 2,
-                  slidesToScroll: 3,
+                  slidesToScroll: 2,
                   infinite: true,
                   dots: true
                 }
@@ -35,25 +52,19 @@ export default function Depoimento(){
           ]
         
     };
-
-   
     
     return(
-        <div className="slick-depoimentos">
+        <div id="depoimentos" className="slick-depoimentos">
             <div className="txt-Depoimento">
                 <p>Nossos clientes</p>
             </div>
             <div className="cont">
                 <Slider {...settings}>
-                    <CardDepoiment/>
-                    <CardDepoiment/>
-                    <CardDepoiment/>
-                    <CardDepoiment/>
-                    <CardDepoiment/>
-                    <CardDepoiment/>
-                    <CardDepoiment/>
-                    <CardDepoiment/>
-                    <CardDepoiment/>
+                    
+                    {depoiment?.map(({ image, description, name})=>(
+                        <CardDepoiment imagemDpm={image[0].url} textoDpm={description} tituloDpm={name}/> 
+                    ))}
+                   
                 </Slider>
             </div>
         </div>
