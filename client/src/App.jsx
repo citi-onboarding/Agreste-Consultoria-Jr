@@ -1,4 +1,12 @@
 import{
+  PostList,
+  CardDepoiment,
+  Button,
+  ContentMobile,
+  CardService,
+} from './components';
+
+import{
   ContactPage,
   Banner,
   Footer,
@@ -13,8 +21,9 @@ function App() {
     <>
       <NavBar/>
       <Banner/>
+     
       <ServicePage/>
-      <Depoimento/>
+      <Depoimento/> 
       <ContentPage/>
       <ContactPage/>
       <Footer/>

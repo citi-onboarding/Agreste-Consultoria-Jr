@@ -10,12 +10,6 @@ import Image from "./assets/contentimg.png";
 export default function ContentPage(){
 
     const [content, setContent] = useState([]);
-    const [clicado, setClicado] = useState(
-        {array: '0',
-        }
-    );
-
-    let i = clicado?.array;
 
     const loadContent = async () => {
         const res = await axios.get('http://localhost:3001/api/conteudos');
@@ -33,16 +27,14 @@ export default function ContentPage(){
             </div>
             <div className="struct-content">
                 <div className="image-section">
-                    <img className="image-of-turn" src={ content[i]?.imagem.url }/>
+                    <img className="image-of-turn" src={Image}/>
                 </div>
                 <div className="second-column">
                     <div className="all-information">
-                        <h2> { content[i]?.nomeConteudo } </h2>
-                        <div className="content-p">
-                            <p> { content[i]?.descricaoConteudo }</p>
-                        </div>
+                        <h2>Nome do Conteúdo</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati id illum eaque maiores quasi labore nulla corrupti quod officia dicta exercitationem odit quia assumenda quo consectetur sunt ab, error illo!</p>
                         <div className="button-content">
-                            <Button nomeBtn="Link para a postagem" linkBtn={content[i]?.link} buttonTextColor="white"/>
+                            <Button nomeBtn="Link para a postagem" buttonTextColor="white"/>
                         </div>
                     </div>
                     <div className="card-compact" >
@@ -51,28 +43,16 @@ export default function ContentPage(){
                         </div>
                         <div className="cards-content">
                             <div className="card-content1">
-                                <img className="thumb1" src={content[0]?.imagem.url}
-                                    onClick={() => {
-                                        setClicado({array: '0', });
-                                    }}
-                                />
-                                <h4>{content[0]?.nomeConteudo}</h4>
+                                <img className="thumb" src={Image}/>
+                                <h4>Nome do conteúdo</h4>
                             </div>
                             <div className="card-content2">
-                                <img className="thumb2" src={content[1]?.imagem.url}
-                                    onClick={() => {
-                                        setClicado({array: '1', })
-                                    }}
-                                />
-                                <h4>{content[1]?.nomeConteudo}</h4>
+                                <img className="thumb" src={Image}/>
+                                <h4>Nome do conteúdo</h4>
                             </div>
-                            <div className="card-content3" >                     
-                                <img className="thumb3" src={content[2]?.imagem.url}
-                                    onClick={() => {
-                                        setClicado({array: '2', })
-                                    }}
-                                />
-                                <h4>{content[2]?.nomeConteudo}</h4>
+                            <div className="card-content3">
+                                <img className="thumb" src={Image}/>
+                                <h4>Nome do conteúdo</h4>
                             </div>
                         </div>
                     </div>
@@ -80,16 +60,16 @@ export default function ContentPage(){
             </div>
 
             <div className="mobile">
-            {content?.map(({nomeConteudo, descricaoConteudo, imagem, link})=>(
+            {content?.map(({nomeConteudo, descricaoConteudo, imagem})=>(
                 <>
                     <ContentMobile className="mobile" 
                     contentTitle={nomeConteudo} 
                     image={imagem.url} 
                     textDescription={descricaoConteudo}
-                    linkConteudo={link}
                     />    
                 </>
-            ))}                 
+            ))}
+                   
             </div>
         </>
     );
