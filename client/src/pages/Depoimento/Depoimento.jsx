@@ -19,10 +19,6 @@ export default function Depoimento(){
         loadDepoiment();
     }, []);
 
-    useEffect(() => {
-        console.log('Depoimentos', depoiment);
-    }, [depoiment]);
-
     const settings = {
         dots: true,
         infinite: true,
