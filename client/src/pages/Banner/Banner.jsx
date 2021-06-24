@@ -22,7 +22,7 @@ function Banner() {
     const [Banner, setBanner] = useState([]);
 
     const loadBanner = async () => {
-        const res = await axios.get("http://localhost:3001/api/banner");
+        const res = await axios.get("http://localhost:3001/api/Banner");
             setBanner(res.data);
     };
 
@@ -44,27 +44,27 @@ function Banner() {
     return(
             <>
                 <div className="tela-inicial">
-                    <section class="banner" role="banner" src={Banner.image?.url}>
-                        <div class="banner-conteudo">
-                            <div class="banner-txt">
-                                {Banner?.map(({titulo, descricaoBanner})=>(
-                                    <>
-                                        <h1>{titulo}</h1>
-                                        <p>{descricaoBanner}</p>
-                                    </>
-                                ))}
-                            </div>
-                            <div class="banner-direita">
-                                <div class="banner-logo">
-                                    <img src={logo} alt="imagrm do banner"/>
+                {Banner?.map( Banner =>{
+                    return((
+                        <section style={{backgroundImage: `linear-gradient(rgba(255, 250, 250, 0.445), rgba(255, 255, 255, 0.233)), url(${Banner.image[0]?.url})`, backgroundRepeat: 'no-repeat',backgroundSize: 'cover'}} className="banner">
+                            <div class="banner-conteudo">
+                                <div class="banner-txt">
+                                            <h1>{Banner.titulo}</h1>
+                                            <p>{Banner.descricaoBanner}</p>
                                 </div>
-                                <div className="btn-banner"  onClick={popupToggle}>
-                                    <Button nomeBtn="Mais sobre nós" imagem={seta}/>
-                                    
+                                <div class="banner-direita">
+                                    <div class="banner-logo">
+                                        <img src={logo} alt="imagrm do banner"/>
+                                    </div>
+                                    <div className="btn-banner"  onClick={popupToggle}>
+                                        <Button nomeBtn="Mais sobre nós" imagem={seta}/>
+                                        
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
+                        </section>
+                    ))})}
+                        
 
                     <section id="aparecer" className="QuemSomos" >
                         <div className="QuemSomos-conteudo">
