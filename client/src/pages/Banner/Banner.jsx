@@ -19,12 +19,11 @@ function Banner() {
         setSobre(res.data);
     };
 
-function Banner() {
     const [Banner, setBanner] = useState([]);
 
     const loadBanner = async () => {
-        const res = await axios.get("http://localhost:3001/api/Banner");
-        setBanner(res.data);
+        const res = await axios.get("http://localhost:3001/api/banner");
+            setBanner(res.data);
     };
 
     useEffect(() => {
@@ -101,6 +100,8 @@ function Banner() {
                     </section>
                 </div>
             </>
+        
+        
     );
 }
 export default Banner;

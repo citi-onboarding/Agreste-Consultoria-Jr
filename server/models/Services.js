@@ -26,13 +26,6 @@ Services.add({
     index: true,
     label:'Título',
   },
-  description: {
-    type: Types.Textarea,
-    required: true,
-    initial: true,
-    index: true,
-    label:'Descrição',
-  },
 });
 
 Services.register();
