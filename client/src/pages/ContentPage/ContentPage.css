@@ -81,6 +81,7 @@ body{
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
+        cursor: pointer;
     }
     
     .content-card-title{
@@ -105,7 +106,9 @@ body{
 
     .image-of-turn{
         width: 100%;
+        max-height: 400px;
         filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+        object-fit: cover;
     }
 
 }
