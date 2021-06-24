@@ -50,28 +50,28 @@ export default function ContentPage(){
                             <p>Acesse conteúdos gratuitos:</p>
                         </div>
                         <div className="cards-content">
-                            <div className="card-content1"
-                                onClick={() => setClicado(
-                                    {array: '0', }
-                                )}
-                            >
-                                <img className="thumb" src={content[0]?.imagem.url}/>
+                            <div className="card-content1">
+                                <img className="thumb1" src={content[0]?.imagem.url}
+                                    onClick={() => {
+                                        setClicado({array: '0', });
+                                    }}
+                                />
                                 <h4>{content[0]?.nomeConteudo}</h4>
                             </div>
-                            <div className="card-content2"
-                                onClick={() => setClicado(
-                                    {array: '1', }
-                                )}
-                            >
-                                <img className="thumb" src={content[1]?.imagem.url}/>
+                            <div className="card-content2">
+                                <img className="thumb2" src={content[1]?.imagem.url}
+                                    onClick={() => {
+                                        setClicado({array: '1', })
+                                    }}
+                                />
                                 <h4>{content[1]?.nomeConteudo}</h4>
                             </div>
-                            <div className="card-content3" 
-                                onClick={() => setClicado(
-                                    {array: '2', }
-                                )} 
-                            >
-                                <img className="thumb" src={content[2]?.imagem.url}/>
+                            <div className="card-content3" >                     
+                                <img className="thumb3" src={content[2]?.imagem.url}
+                                    onClick={() => {
+                                        setClicado({array: '2', })
+                                    }}
+                                />
                                 <h4>{content[2]?.nomeConteudo}</h4>
                             </div>
                         </div>
@@ -89,8 +89,7 @@ export default function ContentPage(){
                     linkConteudo={link}
                     />    
                 </>
-            ))}
-                   
+            ))}                 
             </div>
         </>
     );
