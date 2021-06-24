@@ -4,14 +4,21 @@ import axios from "axios";
 import { default as CardQuemSomos } from "../../components/CardQuemSomos";
 import { default as Button } from "../../components/Button";
 import seta from "./imagem/setaBtn-banner.png";
-import missao from "./imagem/missao.png";
-import visao from "./imagem/visao.png";
-import valor from "./imagem/valor.png";
+import missaoimg from "./imagem/missao.png";
+import visaoimg from "./imagem/visao.png";
+import valorimg from "./imagem/valor.png";
 import setaSQ from "./imagem/seta.png";
 import logo from "./imagem/Logo.png";
 
 function Banner() {
     
+    const [sobre, setSobre] = useState([]);
+
+    const loadSobre = async () => {
+        const res = await axios.get('http://localhost:3001/api/QuemSomos');
+        setSobre(res.data);
+    };
+
     const [Banner, setBanner] = useState([]);
 
     const loadBanner = async () => {
@@ -21,6 +28,7 @@ function Banner() {
 
     useEffect(() => {
         loadBanner();
+        loadSobre();
     }, 
     []);
     
@@ -62,27 +70,32 @@ function Banner() {
                         <div className="QuemSomos-conteudo">
                             <div className="QuemSomos-txt">
                                 <h2>Quem somos</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                
+                                {sobre?.map(({ quemSomos }) => (
+                                <p>{ quemSomos }</p>
+                                ))}
                                 <div className="btnQuemSomos" onClick={popupToggle} >
                                     <Button    imagemInversa={setaSQ} nomeBtn="Voltar" buttonSize="150px" paddingLeftSeta="10px" marginRightNomeBtn="10px"/>
                                 </div>
                             </div>
 
-                            <div className="cards">
-                                <div className="missao">
-                                        <CardQuemSomos titulo="Missão" imagem={missao} descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "/>
-                                </div>  
-                                    
-                                <div className="visao">
-                                        <CardQuemSomos titulo="Visão" imagem={visao} descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "/>
-                                </div>
+                            {sobre?.map(({ missao, visao, valores }) => (
+                            <>
+                                <div className="cards">
+                                    <div className="missao">
+                                            <CardQuemSomos titulo="Missão" imagem={missaoimg} descricao={missao}/>
+                                    </div>  
+                                        
+                                    <div className="visao">
+                                            <CardQuemSomos titulo="Visão" imagem={visaoimg} descricao={visao}/>
+                                    </div>
 
-                                <div className="valores" >
-                                        <CardQuemSomos titulo="valores" imagem={valor} descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "/>
+                                    <div className="valores" >
+                                            <CardQuemSomos titulo="valores" imagem={valorimg} descricao={valores}/>
+                                    </div>
                                 </div>
-                            </div>
+                            </>
+                            ))}
+
                         </div>
                     </section>
                 </div>
