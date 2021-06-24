@@ -24,7 +24,7 @@ export default function ContactPage(){
 
     return(
         <>
-            <div className="page-container">
+            <div id="contato" className="page-container">
                 <div className="image-contact"/>
                 <div className="contact-container">
                     <div className="contact-elements">

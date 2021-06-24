@@ -21,7 +21,7 @@ function Footer() {
 
     
     return(
-        <footer class="footer">
+        <footer id="footer" class="footer">
             <div class="footer-esquerda">
                 <div class="footer-social">
                     <div class="social-icon">

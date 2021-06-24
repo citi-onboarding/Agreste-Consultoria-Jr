@@ -28,7 +28,7 @@ export default function ContentPage(){
 
     return(
         <>
-            <div className="header-title">
+            <div id="conteudo" className="header-title">
                 <h1>Nosso conteúdo</h1>
             </div>
             <div className="struct-content">

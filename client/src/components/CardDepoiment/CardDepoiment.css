@@ -33,14 +33,13 @@ overflow-x: hidden;
   height: 204px;
   background-image: url('../../assets/Rectangle\ 79.png');
   background-repeat: no-repeat;
-  background-size: 110%;
+  background-size: cover;
   background-position: center center;
   border: 3px solid #1B3C74;
   box-sizing: border-box;
   border-radius: 15px 15px 15px 0px;
   margin-top: -3rem;
   margin-left: 3rem;
-  
 }
 
 .externo {
