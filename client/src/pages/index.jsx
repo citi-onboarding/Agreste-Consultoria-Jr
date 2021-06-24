@@ -6,3 +6,5 @@ export { default as NavBar } from './NavBar';
 
 
 
+export { default as ServicePage} from './ServicePage';
+export { default as Depoimento } from './Depoimento';
