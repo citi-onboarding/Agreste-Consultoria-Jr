@@ -2,7 +2,6 @@ const path = require('path');
 const keystone = require('keystone');
 const cors = require('cors');
 
-const Post = keystone.list('Posts');
 const Banner = keystone.list('Banner');
 const Conteudos = keystone.list('Conteudos');
 const QuemSomos = keystone.list('QuemSomos');
