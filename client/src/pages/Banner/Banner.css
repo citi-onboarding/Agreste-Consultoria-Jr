@@ -174,8 +174,7 @@ body {
     align-items: center;
     overflow-x: hidden;
     visibility: hidden;
-    transition: linear 0.2s;
-    animation-duration: 5s; 
+    transition: linear 0.2s; 
 }
 
 .QuemSomos-conteudo {
@@ -245,6 +244,7 @@ body {
 
 #aparecer.active {
     visibility: visible;
+    animation-duration: 5s;
 }
 
 @media screen and (max-width: 1374px) {

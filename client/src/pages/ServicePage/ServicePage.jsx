@@ -1,7 +1,7 @@
 import React, { useEffect, useState, Component } from 'react';
 import './ServicePage.css';
 import { CardService } from '../../components';
-import axios from 'axios';
+import API from '../../services/api';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -33,7 +33,7 @@ export default function ServicePage(){
     const [service, setService] = useState([]);
     
     const loadService = async () => {
-        const res = await axios.get('http://localhost:3001/api/services');
+        const res = await API.get('/services');
         setService(res.data);
     };
 
