@@ -1,7 +1,7 @@
 import React ,{ useEffect, useState }from 'react';
 import './ContentPage.css';
 import { ContentMobile } from '../../components';
-import axios from 'axios';
+import API from '../../services/api';
 import Button from '../../components/Button';
 import LogoMissao from "./assets/logo-missao.png";
 import Image from "./assets/contentimg.png";
@@ -18,7 +18,7 @@ export default function ContentPage(){
     let i = clicado?.array;
 
     const loadContent = async () => {
-        const res = await axios.get('http://localhost:3001/api/conteudos');
+        const res = await API.get('/conteudos');
         setContent(res.data);
     };
 

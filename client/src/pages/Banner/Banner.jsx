@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './Banner.css';
-import axios from "axios";
+import API from "../../services/api";
 import { default as CardQuemSomos } from "../../components/CardQuemSomos";
 import { default as Button } from "../../components/Button";
 import seta from "./imagem/setaBtn-banner.png";
@@ -15,14 +15,14 @@ function Banner() {
     const [sobre, setSobre] = useState([]);
 
     const loadSobre = async () => {
-        const res = await axios.get('http://localhost:3001/api/QuemSomos');
+        const res = await API.get('/QuemSomos');
         setSobre(res.data);
     };
 
     const [Banner, setBanner] = useState([]);
 
     const loadBanner = async () => {
-        const res = await axios.get("http://localhost:3001/api/Banner");
+        const res = await API.get("/Banner");
             setBanner(res.data);
     };
 

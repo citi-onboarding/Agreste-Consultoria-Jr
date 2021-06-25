@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './Footer.css';
-import axios from "axios";
+import API from "../../services/api";
 import iconInsta from "./imagem/insta.png";
 import iconTell from "./imagem/telefone.png";
 import logoCiti from "./imagem/logo-citi.png";
@@ -11,7 +11,7 @@ function Footer() {
     const [Footer, setFooter] = useState([]);
 
     const loadFooter = async () => {
-        const res = await axios.get("http://localhost:3001/api/company");
+        const res = await API.get("/company");
         setFooter(res.data);
     };
 

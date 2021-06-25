@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './ContactPage.css';
-import axios from 'axios';
+import API from '../../services/api';
 import { Button } from '../../components';
 
 export default function ContactPage(){
@@ -14,7 +14,7 @@ export default function ContactPage(){
     const [contact, setContact] = useState([]);
 
     const loadContact = async () => {
-        const res = await axios.get('http://localhost:3001/api/contact');
+        const res = await API.get('/contact');
         setContact(res.data);
     };
 
