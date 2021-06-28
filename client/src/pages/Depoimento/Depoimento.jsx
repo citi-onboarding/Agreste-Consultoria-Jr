@@ -28,24 +28,24 @@ export default function Depoimento(){
         cssEase: "ease",
         responsive: [
             {
-              breakpoint: 700,
-              settings: {
+                breakpoint: 700,
+                settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 infinite: true,
                 dots: true
-              }
+                }
             },
             {
                 breakpoint: 1000,
                 settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2,
-                  infinite: true,
-                  dots: true
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+                dots: true
                 }
-              },
-          ]
+            },
+        ]
         
     };
     
@@ -60,7 +60,6 @@ export default function Depoimento(){
                     {depoiment?.map(({ image, description, name})=>(
                         <CardDepoiment imagemDpm={image[0].url} textoDpm={description} tituloDpm={name}/> 
                     ))}
-                   
                 </Slider>
             </div>
         </div>

@@ -41,7 +41,7 @@ export default function ContentPage(){
                         <div className="content-p">
                             <p> { content[i]?.descricaoConteudo }</p>
                         </div>
-                        <div className="button-content">
+                        <div className="button-content" role="button">
                             <Button nomeBtn="Link para a postagem" linkBtn={content[i]?.link} buttonTextColor="white"/>
                         </div>
                     </div>
@@ -90,7 +90,7 @@ export default function ContentPage(){
                     />    
                 </>
             ))}
-                   
+    
             </div>
         </>
     );

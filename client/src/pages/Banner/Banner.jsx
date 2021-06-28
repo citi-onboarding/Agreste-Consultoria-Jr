@@ -43,7 +43,7 @@ function Banner() {
 
     return(
             <>
-                <div id="inicio" className="tela-inicial">
+                <div id="inicio" className="tela-inicial" role="banner">
                 {Banner?.map( Banner =>{
                     return((
                         <section style={{backgroundImage: `linear-gradient(rgba(255, 250, 250, 0.445), rgba(255, 255, 255, 0.233)), url(${Banner.image[0]?.url})`, backgroundRepeat: 'no-repeat',backgroundSize: 'cover'}} className="banner">
@@ -54,11 +54,10 @@ function Banner() {
                                 </div>
                                 <div class="banner-direita">
                                     <div class="banner-logo">
-                                        <img src={logo} alt="imagrm do banner"/>
+                                        <img src={logo} alt="Logo com o nome Agreste Consultoria na cor preta e em cima do nome o icone com um cacto na cor azul e branco"/>
                                     </div>
-                                    <div className="btn-banner"  onClick={popupToggle}>
+                                    <div className="btn-banner"  onClick={popupToggle} role="button">
                                         <Button nomeBtn="Mais sobre nós" imagem={seta}/>
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -73,15 +72,15 @@ function Banner() {
                                 {sobre?.map(({ quemSomos }) => (
                                 <p>{ quemSomos }</p>
                                 ))}
-                                <div className="btnQuemSomos" onClick={popupToggle} >
-                                    <Button    imagemInversa={setaSQ} nomeBtn="Voltar" buttonSize="150px" paddingLeftSeta="10px" marginRightNomeBtn="10px"/>
+                                <div className="btnQuemSomos" onClick={popupToggle} role="button">
+                                    <Button imagemInversa={setaSQ} nomeBtn="Voltar" buttonSize="150px" paddingLeftSeta="10px" marginRightNomeBtn="10px"/>
                                 </div>
                             </div>
 
                             {sobre?.map(({ missao, visao, valores }) => (
                             <>
                                 <div className="cards">
-                                    <div className="missao">
+                                    <div className="missao" >
                                             <CardQuemSomos titulo="Missão" imagem={missaoimg} descricao={missao}/>
                                     </div>  
                                         

@@ -24,7 +24,7 @@ export default function ContactPage(){
 
     return(
         <>
-            <div id="contato" className="page-container">
+            <form id="contato" className="page-container">
                 <div className="image-contact"/>
                 <div className="contact-container">
                     <div className="contact-elements">
@@ -76,15 +76,15 @@ export default function ContactPage(){
                                     onChange={(e) => setInputTextMsg(e.target.value)}
                                 /> 
                         </div>
-                        <div className="botao-contato-web">
+                        <div className="botao-contato-web" role="button">
                             <Button className="botao-contato-web" nomeBtn="Enviar"/>
                         </div>
-                        <div className="botao-contato-mobile">
+                        <div className="botao-contato-mobile" role="button" >
                             <Button className="botao-contato-mobile" buttonColor="#EBECEE" buttonTextColor="#032C66" nomeBtn="Enviar"/>
                         </div>
                     </div>
                 </div> 
-            </div> 
+            </form> 
         </>
     );
 }
