@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
+
 
 .service-page-container{
     box-sizing: border-box;
@@ -39,7 +34,6 @@
 }
 
 @media screen and (max-width: 780px) {
-    
     .service-page-title{
         height: 100px;
         display: flex;
@@ -129,6 +123,11 @@
     justify-content: center;
 }
 
+.service-page-container.slick-servico .slick-center {
+    width: 950px!important;
+    height: 100%!important;
+}
+
 
 
 .service-page-container .slick-arrow {
@@ -186,13 +185,13 @@
   position: absolute;
   display: block;
   height: 20px;
-  width: 20px;
+  width: 57vw;
   line-height: 0px;
   font-size: 0px;
   cursor: pointer;
   background: transparent;
   color: transparent;
-  top: 50%;
+  top: 103%;
   -webkit-transform: translate(0, -20%);
   -ms-transform: translate(0, 90%);
   transform: translate(0, -50%);
@@ -220,24 +219,45 @@
     cursor: pointer;
 }
 
-.service-page-container .slick-prev:before {
-    display: flex !important;
-    justify-content: flex-end;
-    width: 33vw;
-}
-
-.service-page-container .slick-next:before {
-    margin-left: -64vw;
-}
-
-.service-page-container .slick-prev:before, 
-.service-page-container .slick-next:before {
-    line-height: 22.3;
-}
-
-@media (max-width: 1296px){
-    .service-page-container .slick-next:before {
-        margin-left: -60vw;
+@media (max-width: 1104px){
+    .service-page-container .slick-prev, .service-page-container .slick-next {
+        width: 53vw;
     }
     
 }
+
+@media (max-width: 968px){
+    .service-page-container .slick-prev, .service-page-container .slick-next {
+        width: 49vw;
+    }
+    
+}
+
+@media (max-width: 876px){
+    .service-page-container .slick-prev, .service-page-container .slick-next {
+        width: 45vw;
+    }
+    
+}
+
+@media (max-width: 768px){
+    .service-page-container .slick-prev, .service-page-container .slick-next {
+        width: 30vw;
+    }
+    
+}
+
+@media (max-width: 500px){
+    .service-page-container .slick-prev, .service-page-container .slick-next {
+        width: 5vw;
+        height: 23vh;
+    }
+}
+
+@media (max-width: 320px){
+    .service-page-container{
+        height: calc(100vh + 110px);
+    }
+}
+
+

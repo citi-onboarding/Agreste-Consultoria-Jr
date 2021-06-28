@@ -174,8 +174,10 @@ body {
     align-items: center;
     overflow-x: hidden;
     visibility: hidden;
-    transition: linear 0.2s;
+    transition: linear 0.27s;
     animation-duration: 5s; 
+    position: relative;
+    left: 100vw;
 }
 
 .QuemSomos-conteudo {
@@ -245,6 +247,7 @@ body {
 
 #aparecer.active {
     visibility: visible;
+    left: 0;
 }
 
 @media screen and (max-width: 1374px) {
@@ -337,6 +340,7 @@ body {
         background: #EBECEE;
         visibility: visible;
         margin: 0px;
+        left: 0;
     }
     .QuemSomos-conteudo {
         flex-direction: column;

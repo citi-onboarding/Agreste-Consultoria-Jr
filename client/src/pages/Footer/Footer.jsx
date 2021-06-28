@@ -25,8 +25,8 @@ function Footer() {
             <div class="footer-esquerda">
                 <div class="footer-social">
                     <div class="social-icon">
-                        <img src={iconTell} alt=""/>
-                        <img src={iconInsta} alt=""/>
+                        <img src={iconTell} alt="icone de telefone na cor azul"/>
+                        <img src={iconInsta} alt="icone do instagram na cor azul"/>
                     </div>
                     <div class="social-txt">
                     {Footer?.map(({phone, instagram})=>(
@@ -44,7 +44,7 @@ function Footer() {
                 ))} 
             </div>
             <div class="footer-logo"> 
-                <img src={logoFooter} alt=""/>
+                <img src={logoFooter} alt="Logo com o nome Agreste Consultoria na cor preta e em cima do nome o icone com um cacto na cor azul e branco"/>
             </div>
             <div class="endereco">
                 {Footer?.map(({adress})=>(
@@ -54,7 +54,7 @@ function Footer() {
                 ))} 
                 <div class="footer-logo-citi">
                     <strong>Made with &#60;&#47;&#62; and &hearts; by </strong>
-                    <img src={logoCiti} alt=""/>
+                    <img src={logoCiti} alt="Logo com o nome da empresa Citi na cor preta"/>
                 </div>
             </div>
         </footer>
