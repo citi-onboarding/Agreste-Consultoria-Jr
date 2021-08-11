@@ -11,6 +11,10 @@ export default function ContactPage(){
     const [inputTextAss, setInputTextAss] = useState('');
     const [inputTextMsg, setInputTextMsg] = useState('');
 
+    const data = {
+        inputTextName, inputTextEmail, inputTextMsg, inputTextTel, inputTextAss
+    }
+
     const [contact, setContact] = useState([]);
 
     const loadContact = async () => {
@@ -22,10 +26,10 @@ export default function ContactPage(){
         loadContact();
     }, []);
 
-    const sendEmail = async (e) => {
+    const sendMail = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:3001/api/contact', {inputTextName, inputTextEmail, inputTextTel, inputTextAss, inputTextMsg});
+            await axios.post('http://localhost:3001/api/sendmail', data);
             console.log('Email enviado');
         } catch (error) {
             console.log(`Houve um erro: ${error}`);
@@ -34,7 +38,7 @@ export default function ContactPage(){
 
     return(
         <>
-            <form id="contato" className="page-container" onSubmit ={ (e) => sendEmail(e)}>
+            <form id="contato" className="page-container" >
                 <div className="image-contact"/>
                 <div className="contact-container">
                     <div className="contact-elements">
@@ -48,7 +52,7 @@ export default function ContactPage(){
                             </>
                         ))}
                         
-                        
+                        <form onSubmit ={ (e) => sendMail(e)}>
                             <div className='contact-input'>
                                     <input 
                                         type="text"
@@ -104,7 +108,7 @@ export default function ContactPage(){
                             <div className="botao-contato-mobile" role="button" >
                                 <button type='submit' className="custom-botao-mobile" > Enviar </button>
                             </div>
-                        
+                        </form>
                     </div>
                 </div> 
             </form> 
