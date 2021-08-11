@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ServicePage.css';
 import { CardService } from '../../components';
 import axios from 'axios';

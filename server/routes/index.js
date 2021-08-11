@@ -10,6 +10,7 @@ const Services = keystone.list('Services');
 const Depoiments = keystone.list('Depoiments');
 const Company = keystone.list('Company');
 const Contact = keystone.list('Contact');
+const Email = require('../controllers/mailController');
 
 module.exports = (app) => {
   app.use(cors());
@@ -90,6 +91,11 @@ module.exports = (app) => {
     });
   });
 
+  app.post('api/contact', (req, res) => {
+    console.log("ai dor");
+    res.status(200).send('ai dor');
+  } );
+
   app.get('/api/contact', (req, res) => {
     Contact.model.find((err, data) => {
       if (err) {
@@ -98,7 +104,7 @@ module.exports = (app) => {
         res.send(data);
       }
     });
-  });
+  }); 
 
   app.get('*', (req, res) => {
 		res.redirect('/');

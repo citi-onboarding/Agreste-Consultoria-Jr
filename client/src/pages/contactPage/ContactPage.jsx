@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import React, { useEffect, useState } from 'react';
 import './ContactPage.css';
 import axios from 'axios';
@@ -21,7 +22,8 @@ export default function ContactPage(){
         loadContact();
     }, []);
 
-    const sendEmail = async () => {
+    const sendEmail = async (e) => {
+        e.preventDefault();
         try {
             await axios.post('http://localhost:3001/api/contact', {inputTextName, inputTextEmail, inputTextTel, inputTextAss, inputTextMsg});
             console.log('Email enviado');
@@ -32,7 +34,7 @@ export default function ContactPage(){
 
     return(
         <>
-            <form id="contato" className="page-container" onSubmit={sendEmail}>
+            <form id="contato" className="page-container" onSubmit ={ (e) => sendEmail(e)}>
                 <div className="image-contact"/>
                 <div className="contact-container">
                     <div className="contact-elements">
@@ -46,7 +48,7 @@ export default function ContactPage(){
                             </>
                         ))}
                         
-                        <form >
+                        
                             <div className='contact-input'>
                                     <input 
                                         type="text"
@@ -97,12 +99,12 @@ export default function ContactPage(){
 
                             </div>
                             <div className="botao-contato-web" role="button">
-                                <button type='submit'className="custom-botao-web" onClick={sendEmail}> Enviar </button>
+                                <button type='submit'className="custom-botao-web" > Enviar </button>
                             </div>
                             <div className="botao-contato-mobile" role="button" >
-                                <button type='submit' className="custom-botao-mobile" onClick={sendEmail}> Enviar </button>
+                                <button type='submit' className="custom-botao-mobile" > Enviar </button>
                             </div>
-                        </form>
+                        
                     </div>
                 </div> 
             </form> 
