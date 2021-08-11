@@ -11,7 +11,7 @@ export default function ContactPage(){
     const [inputTextAss, setInputTextAss] = useState('');
     const [inputTextMsg, setInputTextMsg] = useState('');
 
-    const data = {
+    const dados = {
         inputTextName, inputTextEmail, inputTextMsg, inputTextTel, inputTextAss
     }
 
@@ -29,10 +29,10 @@ export default function ContactPage(){
     const sendMail = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:3001/api/sendmail', data);
-            console.log('Email enviado');
+            await axios.post('http://localhost:3001/api/sendmail', dados);
+            alert('Obrigado pelo contato!','Email enviado com Sucesso');
         } catch (error) {
-            console.log(`Houve um erro: ${error}`);
+            alert(`Houve um erro: ${error}`);
         }
     }
 
@@ -52,7 +52,7 @@ export default function ContactPage(){
                             </>
                         ))}
                         
-                        <form onSubmit ={ (e) => sendMail(e)}>
+                        <form onSubmit ={ sendMail} >
                             <div className='contact-input'>
                                     <input 
                                         type="text"
@@ -99,15 +99,13 @@ export default function ContactPage(){
                                         onChange={(e) => setInputTextMsg(e.target.value)}
                                     /> 
 
-                                
-
-                            </div>
+                             </div>
                             <div className="botao-contato-web" role="button">
-                                <button type='submit'className="custom-botao-web" > Enviar </button>
+                                <button type='submit'className="custom-botao-web" onClick={ (e) => sendMail(e) } > Enviar </button>
                             </div>
                             <div className="botao-contato-mobile" role="button" >
-                                <button type='submit' className="custom-botao-mobile" > Enviar </button>
-                            </div>
+                                <button type='submit' className="custom-botao-mobile" onClick={ (e) => sendMail(e) } > Enviar </button>
+                            </div> 
                         </form>
                     </div>
                 </div> 

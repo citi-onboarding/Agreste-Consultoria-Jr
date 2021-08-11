@@ -14,8 +14,6 @@ const sendMail = async (req, res, next) => {
     Mensagem: ${inputTextMsg}
     `;
 
-    console.log("ISsssoooo");
-
     await mailServer({
       destinationUser: process.env.EMAIL,
       subjectText: inputTextAss,

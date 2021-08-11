@@ -91,12 +91,7 @@ module.exports = (app) => {
     });
   });
 
-  // app.post('api/contact', (req, res) => {
-  //   console.log("ai dor");
-  //   res.status(200).send('ai dor');
-  // } );
-
-  app.post('api/sendmail', mailcontroller);
+  app.post('/api/sendmail', mailcontroller);
 
   app.get('/api/contact', (req, res) => {
     Contact.model.find((err, data) => {
