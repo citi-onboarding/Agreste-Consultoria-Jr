@@ -31,8 +31,18 @@ export default function ContactPage(){
         try {
             await axios.post('http://localhost:3001/api/sendmail', dados);
             alert('Obrigado pelo contato!','Email enviado com Sucesso');
+            setInputTextName('');
+            setInputTextEmail('');
+            setInputTextTel('');
+            setInputTextAss('');
+            setInputTextMsg('');
         } catch (error) {
             alert(`Houve um erro: ${error}`);
+            setInputTextName('');
+            setInputTextEmail('');
+            setInputTextTel('');
+            setInputTextAss('');
+            setInputTextMsg('');
         }
     }
 
