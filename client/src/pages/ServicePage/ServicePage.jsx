@@ -40,11 +40,6 @@ export default function ServicePage(){
     useEffect(() => {
         loadService();
     }, []);
-    
-
-    useEffect(() => {
-        console.log('Console:',service);
-    }, [service]);
 
     return(
         <>
