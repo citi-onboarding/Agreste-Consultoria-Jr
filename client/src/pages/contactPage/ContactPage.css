@@ -138,8 +138,33 @@ p  {
 
     .botao-contato-web{
         display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .custom-botao-web{
+        width: 240px;
+        height: 35px;
+        display: flex;
         justify-content: center;
         align-items: center;
+        background: #1B3C74;
+        border-radius: 12px;
+        border: 1px solid rgba(119, 119, 119, 0.445);
+        transition: all .5s linear;
+        cursor: pointer;
+        color: #EBECEE;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 27px;
+        letter-spacing: -0.015em;
+    }
+        
+    .custom-botao-web:hover {
+        background: #26629E;
+        color: linear-gradient(0deg, rgba(255, 255, 255, 0.781) 12%, rgba(175,153,255,1) 100%);
     }
 
     .botao-contato-mobile{
@@ -235,15 +260,33 @@ p  {
         color: #EBECEE;
     }
 
+    .botao-contato-web{
+        display: none;
+    }
+
     .botao-contato-mobile{
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .botao-contato-web{
-        display: none;
+    .custom-botao-mobile{
+        width: 240px;
+        height: 35px;
+        background: #EBECEE;
+        border-radius: 12px;
+        border: 1px solid rgba(119, 119, 119, 0.445);
+        transition: all .5s linear;
+        cursor: pointer;
+        color:#1B3C74;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 27px;
+        letter-spacing: -0.015em;
     }
+
 }
 
 @media screen and  (max-width: 320px) {

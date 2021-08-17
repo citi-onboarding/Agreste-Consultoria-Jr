@@ -31,10 +31,6 @@ function Banner() {
         loadSobre();
     }, 
     []);
-    
-    useEffect(() => {
-        console.log('Banner:', Banner);
-    }, [Banner]);
 
     function popupToggle (){
         const aparecer = document.getElementById('aparecer')
